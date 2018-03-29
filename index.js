@@ -110,3 +110,14 @@ for (let i = 0; i < aname.length; i++) {
 document.write(buffer);
 document.write(`</ol>`);
 console.log(Date.now() - timerun);
+
+if (localStorage.getItem("reload")) {
+	var a = +localStorage.getItem("reload");
+	a++;
+	localStorage.setItem("reload", a);
+} else {
+	var a = 0;
+	localStorage.setItem("reload", a);
+}
+console.log(localStorage.getItem("reload"));
+
