@@ -87,7 +87,7 @@ function arr_rand(a,b) {
 }
 var timerun = Date.now()
 
-var aname = arr_rand(0,10000);
+var aname = arr_rand(0,10);
 if (location.hash == "#asc") {
 	aname.sort(function(a,b){return a-b;});
 } else if (location.hash == "#desc") {
@@ -121,3 +121,32 @@ if (localStorage.getItem("reload")) {
 }
 console.log(localStorage.getItem("reload"));
 
+
+// element = document.body.children[0];
+
+// console.log(element);
+
+// element = element.children[0]
+
+// for (let i = 0; i < element.length; i++) {
+// 	console.log(element);
+// 	element[i] = element.nextElementSibling;	
+// }
+
+// while (element) {
+// 		console.log(element);
+// 	element = element.nextElementSibling;
+// }
+
+example = document.getElementById('perv')
+console.log(example);
+example = document.getElementsByName('im')
+console.log(example);
+example = document.getElementsByTagName('li')
+console.log(example);
+example = document.getElementsByClassName('tri')
+console.log(example);
+example = document.querySelector('.tri')
+console.log(example);
+example = document.querySelectorAll('.tri')
+console.log(example);
