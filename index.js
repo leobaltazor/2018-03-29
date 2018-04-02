@@ -212,7 +212,7 @@ function init(i) {
 	var ele = document.querySelector("ul").children;
 	let j = ele.length-1;
 	while (j>=0) {
-		ele[j].style.background = "";
+		ele[j].style.background = "#555";
 		j--;
 	}
 	ele[i].style.background = color;
