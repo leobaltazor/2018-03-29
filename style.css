@@ -1,6 +1,16 @@
-* {
-	background-color: #777;
+li {
+	height: 50px;
+	width: 50px;
+	/* background-color: yellow; */
+	border: 1px solid black;
+	border-radius: 10em;
+	list-style: none;
+	margin: 10px auto;
 }
-ol {
-	margin-left: 50px;
+
+li:first-of-type {
+	/* background-color: red; */
+}
+li:last-of-type {
+	/* background-color: green; */
 }
