@@ -14,3 +14,11 @@ li:first-of-type {
 li:last-of-type {
 	/* background-color: green; */
 }
+
+.gogo {
+margin-left: 50%;
+transform: translateX(-81px)
+}
+input {
+	width: 100px;
+}

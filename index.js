@@ -197,8 +197,66 @@
 // console.log(element);
 
 //***************************start****setTimeout************
+var i = 0;
+var kk;
+function gogo() {
+	kk= document.getElementById('kk').value
+	init()
+	return kk
+}
+
+function init(i) {
+	let color = ""
+	if (i == 0) {
+		color = "red";
+	} else if (i == 1) {
+		color = "yellow";
+	} else if (i == 2) {
+		color = "green";
+	} else {
+		color = "red";
+		i = 0;
+		kk--;
+		console.log(kk);
+		
+	}
+	var ele = document.querySelector("ul").children;
+	let j = ele.length-1;
+	while (j>=0) {
+		ele[j].style.background = "#555";
+		j--;
+	}
+	ele[i].style.background = color;
+if (kk >= 0) {
+if (i == 1) {
+			setTimeout(function() {
+			ele[i].style.background = "#555";
+		}, 1000);
+		setTimeout(function() {
+			ele[i].style.background = color;
+		}, 2000)
+		setTimeout(function() {
+			i++;
+			init(i);
+		}, 3000)
+} else {
+	setTimeout(function() {
+		i++;
+		init(i);
+	}, 1000)
+}
+} else {
+	ele[i].style.background = "#555";
+}
+}
+
+
+
+//**************************end****setTimeout */
+
+//**********************start****setInterval************* */
 // var i = 0;
-// function init(i) {
+// function init() {
 // 	let color = ""
 // 	if (i == 0) {
 // 		color = "red"
@@ -217,59 +275,10 @@
 // 		j--;
 // 	}
 // 	ele[i].style.background = color;
-// 	setTimeout(function() {
-// 		i++;
-// 		init(i);
-// 	}, 1000)
-
+// 	i++;
 // }
 
-// init()
-//**************************end****setTimeout */
-
-//**********************start****setInterval************* */
-var i = 0;
-function init(k) {
-	let color = ""
-	if (i == 0) {
-		color = "red"
-	} else if (i == 1) {
-		color = "yellow"
-		var timerId = setInterval(function ye() {
-			switch(color) {
-				case 'red':
-				color = "yellow"	
-				break		
-				case 'yellow':
-				color = "#555"
-				break
-				default:
-				color = "yellow"
-			}
-				setTimeout(function() {
-		ye(i);
-	}, 1000)
-		}, 1000);
-		// setTimeout(function() {
-		// 	clearInterval(timerId);
-		// }, 4000);
-	} else if (i == 2) {
-		color = "green"
-		i++;
-	} else {
-		i = 0;
-		color = "red";
-	}
-	var ele = document.querySelector("ul").children;
-	let j = ele.length-1;
-	while (j>=0) {
-		ele[j].style.background = "#555";
-		j--;
-	}
-	ele[i].style.background = color;
-	i++;
-}
-
-setInterval(init, 5000)
+// setInterval(init, 500)
 
 //**********************end****setInterval************* */
+
