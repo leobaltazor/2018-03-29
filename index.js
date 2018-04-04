@@ -221,7 +221,7 @@
 // 		i++;
 // 		init(i);
 // 	}, 1000)
-	
+
 // }
 
 // init()
@@ -235,8 +235,27 @@ function init(k) {
 		color = "red"
 	} else if (i == 1) {
 		color = "yellow"
+		var timerId = setInterval(function ye() {
+			switch(color) {
+				case 'red':
+				color = "yellow"	
+				break		
+				case 'yellow':
+				color = "#555"
+				break
+				default:
+				color = "yellow"
+			}
+				setTimeout(function() {
+		ye(i);
+	}, 1000)
+		}, 1000);
+		// setTimeout(function() {
+		// 	clearInterval(timerId);
+		// }, 4000);
 	} else if (i == 2) {
 		color = "green"
+		i++;
 	} else {
 		i = 0;
 		color = "red";
@@ -248,14 +267,9 @@ function init(k) {
 		j--;
 	}
 	ele[i].style.background = color;
-	i++
+	i++;
 }
 
-setInterval(init, 1000)
-	// setTimeout(function() {
-	// 	i++;
-	// 	init(i);
-	// }, 1000)
+setInterval(init, 5000)
 
-// init()
 //**********************end****setInterval************* */
