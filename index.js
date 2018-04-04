@@ -196,8 +196,40 @@
 // element.innerHTML = user.name +" " + user.lastname
 // console.log(element);
 
+//***************************start****setTimeout************
+// var i = 0;
+// function init(i) {
+// 	let color = ""
+// 	if (i == 0) {
+// 		color = "red"
+// 	} else if (i == 1) {
+// 		color = "yellow"
+// 	} else if (i == 2) {
+// 		color = "green"
+// 	} else {
+// 		i = 0;
+// 		color = "red";
+// 	}
+// 	var ele = document.querySelector("ul").children;
+// 	let j = ele.length-1;
+// 	while (j>=0) {
+// 		ele[j].style.background = "#555";
+// 		j--;
+// 	}
+// 	ele[i].style.background = color;
+// 	setTimeout(function() {
+// 		i++;
+// 		init(i);
+// 	}, 1000)
+	
+// }
+
+// init()
+//**************************end****setTimeout */
+
+//**********************start****setInterval************* */
 var i = 0;
-function init(i) {
+function init(k) {
 	let color = ""
 	if (i == 0) {
 		color = "red"
@@ -216,11 +248,14 @@ function init(i) {
 		j--;
 	}
 	ele[i].style.background = color;
-	setTimeout(function() {
-		i++;
-		init(i);
-	}, 1000)
-	
+	i++
 }
 
-init()
+setInterval(init, 1000)
+	// setTimeout(function() {
+	// 	i++;
+	// 	init(i);
+	// }, 1000)
+
+// init()
+//**********************end****setInterval************* */
